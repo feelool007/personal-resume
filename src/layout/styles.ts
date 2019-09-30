@@ -5,20 +5,22 @@ export default (theme: Theme) => createStyles({
     backgroundColor: "#eae5e5",
     display: "flex",
     flexDirection: "column",
-    width: "100vw",
-    height: "100vh"
+    minWidth: "100vw",
+    minHeight: "100vh",
+    overflowY: "scroll"
   },
   mainPanel: {
     flex: 1,
     paddingLeft: "15%",
     paddingRight: "15%",
-    paddingTop: theme.spacing(4)
+    paddingTop: theme.spacing(4),
+    // overflowY: "scroll"
   },
   footer: {
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    height: 80,
+    height: 60,
     borderTop: "1px solid #bdbdbd",
     color: "#757575",
     paddingLeft: "15%",
