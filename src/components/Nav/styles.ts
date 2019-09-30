@@ -8,6 +8,7 @@ export default (theme: Theme) => createStyles({
     cursor: "pointer",
     fontWeight: "bold",
     fontSize: 18,
+    transition: "color .15s ease-in",
     "&:hover": {
       color: "#039be5"
     }
@@ -18,9 +19,24 @@ export default (theme: Theme) => createStyles({
   navItemActive: {
     color: "#039be5"
   },
+  navBarContainer: {
+    display: "flex",
+    alignItems: "flex-end"
+  },
   navBar: {
     display: "flex",
-    flexDirection: "row",
-    alignItems: "flex-end"
+    flex: 1
+  },
+  navBarActions: {
+    display: "flex"
+  },
+  navBarActionsIcon: {
+    fontSize: 32,
+    cursor: "pointer",
+    color: "#616161",
+    transition: "color .15s ease-in",
+    "&:hover": {
+      color: "#212121"
+    }
   }
 })

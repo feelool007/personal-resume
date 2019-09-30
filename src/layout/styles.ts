@@ -35,6 +35,9 @@ export default (theme: Theme) => createStyles({
   headerTitle: {
     marginRight: theme.spacing(8)
   },
+  headerActions: {
+    flex: 1
+  },
   content: {
     flex: 1,
     marginBottom: theme.spacing(4)

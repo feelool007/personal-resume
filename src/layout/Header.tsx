@@ -17,7 +17,9 @@ class Header extends React.Component<PHeader> {
             一位在前端打滾的專職碼農
           </Typography>
         </div>
-        {children}
+        <div className={classes.headerActions}>
+          {children}
+        </div>
       </div>
     );
   };
