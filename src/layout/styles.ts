@@ -2,7 +2,7 @@ import { createStyles, Theme } from "@material-ui/core";
 
 export default (theme: Theme) => createStyles({
   wrapper: {
-    backgroundColor: "#d7ccc8",
+    backgroundColor: "#eae5e5",
     display: "flex",
     flexDirection: "column",
     width: "100vw",

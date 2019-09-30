@@ -16,6 +16,11 @@ export const paths: Array<Path> = [
     name: "Resume"
   },
   {
+    to: "/skills",
+    text: "專長技能",
+    name: "Skills"
+  },
+  {
     to: "/projects",
     text: "作品介紹",
     name: "Projects"
