@@ -1,12 +1,12 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+
+import { CResumeContainer } from "../containers/Resume";
 
 class PageResume extends React.Component<{}> {
   render = () => {
     return (
-      <Typography variant="h4">
-        This is resume page.
-      </Typography>
+      // @ts-ignore
+      <CResumeContainer />
     );
   };
 }

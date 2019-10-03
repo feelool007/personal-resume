@@ -1,7 +1,9 @@
 import { ProfileState } from "./profile/types";
+import { ResumeState } from "./resume/types";
 
 export interface AppState {
   profile: ProfileState;
+  resume: ResumeState;
 }
 
 export type BaseAction<T = string> = {

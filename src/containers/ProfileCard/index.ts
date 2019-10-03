@@ -1,1 +1,1 @@
-export { default as ProfileCardContainer } from "./ProfileCard";
+export { default as CProfileCard } from "./CProfileCard";

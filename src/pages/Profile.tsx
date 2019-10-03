@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 
-import { ProfileCardContainer } from "../containers/ProfileCard";
+import { CProfileCard } from "../containers/ProfileCard";
 
 class PageProfile extends React.Component<{}> {
   render = () => {
@@ -13,7 +13,7 @@ class PageProfile extends React.Component<{}> {
           </Typography>
         </Grid>
         <Grid item sm={6}>
-          <ProfileCardContainer />
+          <CProfileCard />
         </Grid>
       </Grid>
     );
