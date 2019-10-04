@@ -2,7 +2,7 @@ import { call, put, takeEvery } from "redux-saga/effects";
 
 import { fetchResumeData } from "../../api/resume";
 import { fetchResumeDataSuccess, fetchResumeDataFailed } from "./actions";
-import { FETCH_RESUME_DATA_REQUEST } from "./constants";
+import { ResumeConstants } from "./constants";
 
 function* fetchResumeDataSaga() {
   try {
@@ -14,5 +14,5 @@ function* fetchResumeDataSaga() {
 }
 
 export function* fetchResumeDataSagaListener() {
-  yield takeEvery(FETCH_RESUME_DATA_REQUEST, fetchResumeDataSaga);
+  yield takeEvery(ResumeConstants.FETCH_RESUME_DATA_REQUEST, fetchResumeDataSaga);
 }

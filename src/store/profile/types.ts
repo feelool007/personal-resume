@@ -1,15 +1,15 @@
 import { BaseAction, ActionGeneratorType0, ActionGeneratorType1 } from "../types";
-import { FETCH_PROFILE_DATA_REQUEST, FETCH_PROFILE_DATA_SUCCESS, FETCH_PROFILE_DATA_FAILED } from "./constants";
+import { ProfileConstants } from "./constants";
 import { ApiErrorType } from "../../api";
 import { ProfileType } from "../../components/ProfileCard";
 
-export interface FetchProfileDataRequestAction extends BaseAction<typeof FETCH_PROFILE_DATA_REQUEST> {}
+export interface FetchProfileDataRequestAction extends BaseAction<typeof ProfileConstants.FETCH_PROFILE_DATA_REQUEST> {}
 
-export interface FetchProfileDataSuccessAction extends BaseAction<typeof FETCH_PROFILE_DATA_SUCCESS> {
+export interface FetchProfileDataSuccessAction extends BaseAction<typeof ProfileConstants.FETCH_PROFILE_DATA_SUCCESS> {
   payload: Array<ProfileType>;
 }
 
-export interface FetchProfileDataFailedAction extends BaseAction<typeof FETCH_PROFILE_DATA_FAILED> {
+export interface FetchProfileDataFailedAction extends BaseAction<typeof ProfileConstants.FETCH_PROFILE_DATA_FAILED> {
   error?: ApiErrorType;
 }
 

@@ -1,8 +1,4 @@
-import {
-  FETCH_PROFILE_DATA_REQUEST,
-  FETCH_PROFILE_DATA_SUCCESS,
-  FETCH_PROFILE_DATA_FAILED
-} from "./constants";
+import { ProfileConstants } from "./constants";
 
 import {
   FetchProfileDataRequestType,
@@ -11,15 +7,15 @@ import {
 } from "./types";
 
 export const fetchProfileDataRequest: FetchProfileDataRequestType = () => ({
-  type: FETCH_PROFILE_DATA_REQUEST
+  type: ProfileConstants.FETCH_PROFILE_DATA_REQUEST
 });
 
 export const fetchProfileDataSuccess: FetchProfileDataSuccessType = payload => ({
-  type: FETCH_PROFILE_DATA_SUCCESS,
+  type: ProfileConstants.FETCH_PROFILE_DATA_SUCCESS,
   payload
 });
 
 export const fetchProfileDataFailed: FetchProfileDataFailedType = error => ({
-  type: FETCH_PROFILE_DATA_FAILED,
+  type: ProfileConstants.FETCH_PROFILE_DATA_FAILED,
   error
 });

@@ -1,11 +1,10 @@
 import { put, takeEvery, call } from "redux-saga/effects";
 
-import { FetchProfileDataRequestAction } from "./types";
 import { fetchProfileData } from "../../api/profile";
 import { fetchProfileDataSuccess, fetchProfileDataFailed } from "./actions";
-import { FETCH_PROFILE_DATA_REQUEST } from "./constants";
+import { ProfileConstants } from "./constants";
 
-function* fetchProfileDataSaga(action: FetchProfileDataRequestAction) {
+function* fetchProfileDataSaga() {
   try {
     const response = yield call<typeof fetchProfileData>(fetchProfileData);
     yield put(fetchProfileDataSuccess(response.data));
@@ -15,5 +14,5 @@ function* fetchProfileDataSaga(action: FetchProfileDataRequestAction) {
 }
 
 export function* fetchProfileDataListener() {
-  yield takeEvery(FETCH_PROFILE_DATA_REQUEST, fetchProfileDataSaga);
+  yield takeEvery(ProfileConstants.FETCH_PROFILE_DATA_REQUEST, fetchProfileDataSaga);
 }

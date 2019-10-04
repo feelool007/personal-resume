@@ -1,7 +1,4 @@
-import {
-  FETCH_RESUME_DATA_SUCCESS,
-  FETCH_RESUME_DATA_FAILED
-} from "./constants";
+import { ResumeConstants } from "./constants";
 
 import { FetchResumeDataActionType, ResumeState } from "./types";
 
@@ -14,13 +11,13 @@ export default (
   action: FetchResumeDataActionType
 ): ResumeState => {
   switch (action.type) {
-    case FETCH_RESUME_DATA_SUCCESS:
+    case ResumeConstants.FETCH_RESUME_DATA_SUCCESS:
       return {
         ...state,
         data: action.payload
       };
 
-    case FETCH_RESUME_DATA_FAILED:
+    case ResumeConstants.FETCH_RESUME_DATA_FAILED:
       return {
         ...state,
         error: action.error

@@ -1,8 +1,4 @@
-import {
-  FETCH_RESUME_DATA_REQUEST,
-  FETCH_RESUME_DATA_SUCCESS,
-  FETCH_RESUME_DATA_FAILED
-} from "./constants";
+import { ResumeConstants } from "./constants";
 import {
   BaseAction,
   ActionGeneratorType0,
@@ -12,15 +8,15 @@ import { ApiErrorType } from "../../api";
 import { ResumeContentType } from "../../components/Resume";
 
 export interface FetchResumeDataRequestAction
-  extends BaseAction<typeof FETCH_RESUME_DATA_REQUEST> {}
+  extends BaseAction<typeof ResumeConstants.FETCH_RESUME_DATA_REQUEST> {}
 
 export interface FetchResumeDataSuccessAction
-  extends BaseAction<typeof FETCH_RESUME_DATA_SUCCESS> {
+  extends BaseAction<typeof ResumeConstants.FETCH_RESUME_DATA_SUCCESS> {
   payload: Array<ResumeContentType>;
 }
 
 export interface FetchResumeDataFailedAction
-  extends BaseAction<typeof FETCH_RESUME_DATA_FAILED> {
+  extends BaseAction<typeof ResumeConstants.FETCH_RESUME_DATA_FAILED> {
   error: ApiErrorType;
 }
 
@@ -29,11 +25,19 @@ export type FetchResumeDataActionType =
   | FetchResumeDataSuccessAction
   | FetchResumeDataFailedAction;
 
-export type FetchResumeDataRequestType = ActionGeneratorType0<FetchResumeDataRequestAction>;
+export type FetchResumeDataRequestType = ActionGeneratorType0<
+  FetchResumeDataRequestAction
+>;
 
-export type FetchResumeDataSuccessType = ActionGeneratorType1<Array<ResumeContentType>, FetchResumeDataSuccessAction>;
+export type FetchResumeDataSuccessType = ActionGeneratorType1<
+  Array<ResumeContentType>,
+  FetchResumeDataSuccessAction
+>;
 
-export type FetchResumeDataFailedType = ActionGeneratorType1<ApiErrorType, FetchResumeDataFailedAction>;
+export type FetchResumeDataFailedType = ActionGeneratorType1<
+  ApiErrorType,
+  FetchResumeDataFailedAction
+>;
 
 export interface ResumeState {
   data: Array<ResumeContentType>;
