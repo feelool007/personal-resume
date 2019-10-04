@@ -15,7 +15,8 @@
     "react-router-dom": "^5.1.1",
     "react-scripts": "3.1.2",
     "redux": "^4.0.4",
-    "redux-actions": "^2.6.5"
+    "redux-actions": "^2.6.5",
+    "redux-saga": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -49,5 +50,6 @@
     "@types/redux-actions": "^2.6.1",
     "@types/webpack": "^4.39.2",
     "typescript": "3.6.3"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
