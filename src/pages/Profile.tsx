@@ -1,7 +1,8 @@
 import React from "react";
-import { connect } from "react-redux"
-import { Typography, Grid } from "@material-ui/core";
+import { connect } from "react-redux";
+import { Grid } from "@material-ui/core";
 
+import { Picture } from "../components/Picture";
 import { CProfileCard } from "../containers/ProfileCard";
 import { fetchProfileDataRequest } from "../store/profile/actions";
 
@@ -16,13 +17,21 @@ class PageProfile extends React.Component<PPageProfile> {
 
   render = () => {
     return (
-      <Grid container>
-        <Grid item sm={6}>
-          <Typography variant="h4">
-            This is photo.
-          </Typography>
+      <Grid container spacing={4}>
+        <Grid item xs={12} lg={6}>
+          <Picture
+            rounded
+            roundRadius="40%"
+            width={360}
+            height={360}
+            rotate="90deg"
+            scale="1.3"
+            offsetX="40%"
+            offsetY="60%"
+            src="http://localhost:8080/static/res/img002.jpg"
+          />
         </Grid>
-        <Grid item sm={6}>
+        <Grid item xs={12} lg={6}>
           <CProfileCard />
         </Grid>
       </Grid>
