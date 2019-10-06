@@ -2,12 +2,12 @@ import { createStyles, Theme } from "@material-ui/core";
 
 export default (theme: Theme) => createStyles({
   title: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: "bold",
     marginBottom: theme.spacing(0.5)
   },
   caption: {
-    fontSize: 18,
+    fontSize: 14,
     color: "#616161",
     marginBottom: theme.spacing(0.5)
   },
@@ -32,7 +32,17 @@ export default (theme: Theme) => createStyles({
     whiteSpace: "pre-wrap",
     wordWrap: "break-word"
   },
-  resumeContainer: {
-
-  }
+  avatar: {
+    width: 120,
+    height: 120,
+    backgroundColor: "#e65100",
+    color: "#ffffff"
+  },
+  groupDivider: {
+    width: "100%",
+    backgroundColor: "#9e9e9e",
+    height: 2,
+    marginBottom: theme.spacing(2)
+  },
+  resumeContainer: {}
 });

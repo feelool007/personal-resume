@@ -5,14 +5,14 @@ import {
   ActionGeneratorType1
 } from "../types";
 import { ApiErrorType } from "../../api";
-import { ResumeContentType } from "../../components/Resume";
+import { ResumeContentGroupType } from "../../components/Resume";
 
 export interface FetchResumeDataRequestAction
   extends BaseAction<typeof ResumeConstants.FETCH_RESUME_DATA_REQUEST> {}
 
 export interface FetchResumeDataSuccessAction
   extends BaseAction<typeof ResumeConstants.FETCH_RESUME_DATA_SUCCESS> {
-  payload: Array<ResumeContentType>;
+  payload: Array<ResumeContentGroupType>;
 }
 
 export interface FetchResumeDataFailedAction
@@ -30,7 +30,7 @@ export type FetchResumeDataRequestType = ActionGeneratorType0<
 >;
 
 export type FetchResumeDataSuccessType = ActionGeneratorType1<
-  Array<ResumeContentType>,
+  Array<ResumeContentGroupType>,
   FetchResumeDataSuccessAction
 >;
 
@@ -40,6 +40,6 @@ export type FetchResumeDataFailedType = ActionGeneratorType1<
 >;
 
 export interface ResumeState {
-  data: Array<ResumeContentType>;
+  data: Array<ResumeContentGroupType>;
   error?: ApiErrorType;
 }

@@ -14,10 +14,19 @@ export type ResumeContentType = {
   id?: string;
 };
 
+export type ResumeContentGroupType = {
+  group: string;
+  contents: Array<ResumeContentType>;
+};
+
 export interface PResumeContent extends WithStyles<typeof styles> {
   data: ResumeContentType;
 }
 
+export interface PResumeContentGroup extends WithStyles<typeof styles> {
+  data: ResumeContentGroupType;
+}
+
 export interface PResumeContainer extends WithStyles<typeof styles> {
-  data: Array<ResumeContentType>;
+  data: Array<ResumeContentGroupType>;
 }

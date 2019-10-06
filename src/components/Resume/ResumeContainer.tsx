@@ -3,7 +3,7 @@ import { withStyles, Divider, Grid } from "@material-ui/core";
 
 import { PResumeContainer } from "./types";
 import styles from "./styles";
-import ResumeContent from "./ResumeContent";
+import ResumeContentGroup from "./ResumeContentGroup";
 
 class ResumeContainer extends React.Component<PResumeContainer> {
   render = () => {
@@ -12,11 +12,13 @@ class ResumeContainer extends React.Component<PResumeContainer> {
       <Grid container direction="column" className={classes.resumeContainer}>
         {data.map((d, index) => {
           return (
-            <React.Fragment key={index}>
-              <ResumeContent data={d} />
+            <Grid key={index} container>
+              <ResumeContentGroup data={d} />
               {/* Add divider at bottom if not the last content. */}
-              {index < data.length - 2 && <Divider />}
-            </React.Fragment>
+              {index < data.length - 1 && (
+                <Divider className={classes.groupDivider} />
+              )}
+            </Grid>
           );
         })}
       </Grid>
