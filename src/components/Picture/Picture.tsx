@@ -1,13 +1,13 @@
 import React from "react";
-import { withStyles, CardMedia } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 
 import { PPicture } from "./types";
 import styles from "./styles";
 
 class Picture extends React.Component<PPicture> {
   static defaultProps: Partial<PPicture> = {
-    width: 240,
-    height: 360,
+    width: "100%",
+    height: "100%",
     rounded: false,
     roundRadius: "40%",
     rotate: "0deg",
@@ -20,7 +20,7 @@ class Picture extends React.Component<PPicture> {
     const { classes } = this.props;
     return (
       <div className={classes.container}>
-        <CardMedia className={classes.cardMedia} />
+        <div className={classes.cardMedia} />
       </div>
     );
   };

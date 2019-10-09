@@ -28,7 +28,7 @@ class PageProfile extends React.Component<PPageProfile> {
             scale="1.3"
             offsetX="40%"
             offsetY="60%"
-            src="http://localhost:8080/static/res/img002.jpg"
+            src="/resource/image/profile/img002.jpg"
           />
         </Grid>
         <Grid item xs={12} lg={6}>

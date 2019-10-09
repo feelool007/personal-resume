@@ -7,7 +7,7 @@ export interface PPictureWithoutClasses {
   height?: string | number;
   rounded?: boolean;
   roundRadius?: number | string;
-  src: string;
+  src?: string;
   rotate?: string;
   scale?: number | string;
   offsetX?: string | number;
@@ -15,3 +15,13 @@ export interface PPictureWithoutClasses {
 }
 
 export interface PPicture extends WithStyles<typeof styles>, PPictureWithoutClasses {}
+
+export interface PSwipeblePictures extends WithStyles<typeof styles> {
+  width?: number | string;
+  height?: number | string;
+}
+
+export interface SSwipeblePictures {
+  index: number;
+  showIcon: boolean;
+}
