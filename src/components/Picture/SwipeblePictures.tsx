@@ -14,6 +14,11 @@ class SwipeblePictures extends React.Component<
   PSwipeblePictures,
   SSwipeblePictures
 > {
+  static defaultProps: Partial<PSwipeblePictures> = {
+    width: "100%",
+    height: "100%"
+  };
+
   constructor(props: PSwipeblePictures) {
     super(props);
     this.state = {
