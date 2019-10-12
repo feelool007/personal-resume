@@ -15,7 +15,7 @@ class ProjectDescription extends React.Component<PProjectDescription> {
   render = () => {
     const { name, description, repositoryUrl, classes } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <Grid container>
           <Typography className={classes.title}>{name}</Typography>
           {repositoryUrl && (
@@ -25,7 +25,7 @@ class ProjectDescription extends React.Component<PProjectDescription> {
         <Typography className={classes.body}>
           {description}
         </Typography>
-      </div>
+      </React.Fragment>
     );
   };
 }

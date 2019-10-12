@@ -11,12 +11,8 @@ export default (theme: Theme) =>
       width: "100%",
       height: "100%",
       overflow: "hidden",
-      maxWidth: 480,
-      maxHeight: 480,
-      [theme.breakpoints.down("sm")]: {
-        maxWidth: 240,
-        maxHeight: 240
-      }
+      // maxWidth: 480,
+      // maxHeight: 480
     },
     // Adapting based on props, ref to https://material-ui.com/styles/basics/#adapting-based-on-props
     cardMedia: {
@@ -37,10 +33,7 @@ export default (theme: Theme) =>
     },
     swipeViewContainer: {
       position: "relative",
-      maxWidth: 480,
-      [theme.breakpoints.down("sm")]: {
-        maxWidth: 240
-      },
+      // maxWidth: 480,
       width: props => props.width,
       height: props => props.height
     },

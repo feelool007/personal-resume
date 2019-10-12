@@ -18,20 +18,20 @@ class PageProfile extends React.Component<PPageProfile> {
   render = () => {
     return (
       <Grid container spacing={4}>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} md={6}>
           <Picture
             rounded
             roundRadius="40%"
             width={360}
             height={360}
             rotate="90deg"
-            scale="1.3"
+            scale="1.1"
             offsetX="40%"
             offsetY="60%"
             src="/resource/image/profile/img002.jpg"
           />
         </Grid>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} md={6}>
           <CProfileCard />
         </Grid>
       </Grid>

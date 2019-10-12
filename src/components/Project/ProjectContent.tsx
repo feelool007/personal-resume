@@ -11,14 +11,14 @@ class ProjectContent extends React.Component<PProjectContent> {
     const { content, classes } = this.props;
     return (
       <Grid container spacing={2} className={classes.content}>
-        <Grid item sm={12} md={6}>
+        <Grid item xs={12} sm={6}>
           <SwipeblePictures width="100%" height={240}>
             {content.pictures.map((d, index) => {
               return <Picture key={index} src={d} />;
             })}
           </SwipeblePictures>
         </Grid>
-        <Grid item sm={12} md={6}>
+        <Grid item xs={12} sm={6}>
           <ProjectDescription
             name={content.name}
             description={content.description}

@@ -14,7 +14,11 @@ export default (theme: Theme) => createStyles({
     paddingLeft: "15%",
     paddingRight: "15%",
     paddingTop: theme.spacing(4),
-    // overflowY: "scroll"
+    // overflowY: "scroll",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2)
+    }
   },
   footer: {
     display: "flex",
@@ -26,7 +30,11 @@ export default (theme: Theme) => createStyles({
     paddingLeft: "15%",
     paddingRight: "15%",
     marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2)
+    }
   },
   header: {
     display: "flex",

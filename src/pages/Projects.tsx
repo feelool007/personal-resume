@@ -15,6 +15,12 @@ const contents: PProjectContainer["contents"] = [
     name: "Project01",
     description: "Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block.",
     repositoryUrl: "https://github.com"
+  },
+  {
+    pictures: pictureSrc,
+    name: "Project01",
+    description: "Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block.",
+    repositoryUrl: "https://github.com"
   }
 ];
 
