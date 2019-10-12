@@ -21,7 +21,8 @@ export default (theme: Theme) => createStyles({
   },
   navBarContainer: {
     display: "flex",
-    alignItems: "flex-end"
+    alignItems: "flex-end",
+    justifyContent: "flex-end"
   },
   navBar: {
     display: "flex",
@@ -38,5 +39,9 @@ export default (theme: Theme) => createStyles({
     "&:hover": {
       color: "#212121"
     }
+  },
+  sidebar: {
+    width: "70%",
+    backgroundColor: "#272727"
   }
 })
