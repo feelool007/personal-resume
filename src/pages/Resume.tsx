@@ -22,8 +22,8 @@ class PageResume extends React.Component<PPageResume> {
 }
 
 const mapDispatchToProps: MapDispatchToProps<
-  PPageResume,
-  Pick<PPageResume, "fetchResume">
+  Pick<PPageResume, "fetchResume">,
+  {}
 > = dispatch => ({
   fetchResume: () => dispatch(fetchResumeDataRequest())
 });

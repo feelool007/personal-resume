@@ -1,35 +1,34 @@
 import React from "react";
-// import { Grid } from "@material-ui/core";
+import { connect, MapDispatchToProps } from "react-redux";
 
-// import { SwipeblePictures, Picture } from "../components/Picture";
-import { ProjectContainer, PProjectContainer } from "../components/Project";
+import { CProjectContainer } from "../containers/Project";
+import { fetchProjectDataRequest } from "../store/project/actions";
 
-const pictureSrc = [
-  "/resource/image/emm/emm001.png",
-  "/resource/image/emm/emm002.png",
-  "/resource/image/emm/emm003.png"
-];
-const contents: PProjectContainer["contents"] = [
-  {
-    pictures: pictureSrc,
-    name: "Project01",
-    description: "Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block.",
-    repositoryUrl: "https://github.com"
-  },
-  {
-    pictures: pictureSrc,
-    name: "Project01",
-    description: "Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block. Here is something amazing about your project, you can add anything in this block.",
-    repositoryUrl: "https://github.com"
-  }
-];
+export interface PPageProjects {
+  fetchProject: () => void;
+}
 
-class PageProjects extends React.Component<{}> {
+class PageProjects extends React.Component<PPageProjects> {
+  componentDidMount = () => {
+    this.props.fetchProject();
+  };
+
   render = () => {
     return (
-      <ProjectContainer contents={contents} />
+      // @ts-ignore
+      <CProjectContainer />
     );
   };
 }
 
-export default PageProjects;
+const mapDispatchToProps: MapDispatchToProps<
+  Pick<PPageProjects, "fetchProject">,
+  {}
+> = dispatch => ({
+  fetchProject: () => dispatch(fetchProjectDataRequest())
+});
+
+export default connect(
+  undefined,
+  mapDispatchToProps
+)(PageProjects);

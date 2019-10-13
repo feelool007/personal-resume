@@ -14,5 +14,8 @@ function* fetchResumeDataSaga() {
 }
 
 export function* fetchResumeDataSagaListener() {
-  yield takeEvery(ResumeConstants.FETCH_RESUME_DATA_REQUEST, fetchResumeDataSaga);
+  yield takeEvery(
+    ResumeConstants.FETCH_RESUME_DATA_REQUEST,
+    fetchResumeDataSaga
+  );
 }

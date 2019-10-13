@@ -1,9 +1,11 @@
 import { ProfileState } from "./profile/types";
 import { ResumeState } from "./resume/types";
+import { ProjectState } from "./project/types";
 
 export interface AppState {
   profile: ProfileState;
   resume: ResumeState;
+  project: ProjectState;
 }
 
 export type BaseAction<T = string> = {
