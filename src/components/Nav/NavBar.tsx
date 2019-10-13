@@ -7,7 +7,7 @@ import { PNavBar, SNavBar } from "./types";
 import styles from "./styles";
 import NavItem from "./NavItem";
 import Sidebar from "./Sidebar";
-import { Github } from "../Icons";
+import { Github, Linkedin } from "../Icons";
 
 class NavBar extends React.Component<PNavBar, SNavBar> {
   constructor(props: PNavBar) {
@@ -23,9 +23,9 @@ class NavBar extends React.Component<PNavBar, SNavBar> {
     }));
   };
 
-  handleLinkToGithub = () => {
-    const href = "https://github.com/feelool007";
-    const tab = window.open(href, "_blank");
+  handleGoToLink = (url: string) => () => {
+    // const href = "https://github.com/feelool007";
+    const tab = window.open(url, "_blank");
     if (tab) tab.focus();
   };
 
@@ -51,7 +51,11 @@ class NavBar extends React.Component<PNavBar, SNavBar> {
             {/* <Pdf className={classes.navBarActionsIcon} /> */}
             <Github
               className={classes.navBarActionsIcon}
-              onClick={this.handleLinkToGithub}
+              onClick={this.handleGoToLink("https://github.com/feelool007")}
+            />
+            <Linkedin
+              className={classes.navBarActionsIcon}
+              onClick={this.handleGoToLink("https://tw.linkedin.com/in/kailin-cho-1003a1146")}
             />
           </div>
         </Hidden>

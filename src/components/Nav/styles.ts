@@ -38,6 +38,9 @@ export default (theme: Theme) => createStyles({
     transition: "color .15s ease-in",
     "&:hover": {
       color: "#212121"
+    },
+    "&:not(first-of-type)": {
+      marginLeft: theme.spacing(1.5)
     }
   },
   sidebar: {
