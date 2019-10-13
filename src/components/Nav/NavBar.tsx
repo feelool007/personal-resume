@@ -24,7 +24,7 @@ class NavBar extends React.Component<PNavBar, SNavBar> {
   };
 
   handleLinkToGithub = () => {
-    const href = "https://github.com";
+    const href = "https://github.com/feelool007";
     const tab = window.open(href, "_blank");
     if (tab) tab.focus();
   };
